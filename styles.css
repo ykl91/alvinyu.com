@@ -505,9 +505,9 @@ nav ul li a{
 
 .portfolio-items{
     width: 100%;
-    display: flex;
+    display: block;
     margin-top: 15%;
-    left: 40px;
+    left: 10%;
 }
 
 .portfolio-items .item{

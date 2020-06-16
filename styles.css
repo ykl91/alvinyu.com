@@ -15,7 +15,7 @@ html{
    }
 
 body{
-    background-color: white;
+    background: grey;
 }
 
 /*********PAGE PRELOADING***********/
@@ -33,7 +33,7 @@ body{
 }
 
 .page-preloader:before{
-    content: 'Loading';
+    content: 'Readying';
     position: absolute;
     font-size: 12em;
     font-weight: 900;
@@ -423,10 +423,13 @@ nav ul li a{
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #070707;
 }
 
 .services-desc{
     font-size: 14px;
+    color: black;
 }
 
 @media (max-width: 960px){
@@ -603,7 +606,7 @@ nav ul li a{
 }
 
 .testimonial{
-    background: #fff;
+    background: grey;
     padding: 30px;
 }
 

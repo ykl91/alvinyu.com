@@ -33,7 +33,7 @@ body{
 }
 
 .page-preloader:before{
-    content: 'Readying';
+    content: 'Loading';
     position: absolute;
     font-size: 12em;
     font-weight: 900;

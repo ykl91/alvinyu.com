@@ -321,7 +321,7 @@ nav ul li a{
 }
 
 .p3{
-    width: 75%;
+    width: 30%;
 }
 
 .p4{
@@ -329,20 +329,13 @@ nav ul li a{
 }
 
 .p5{
-    width: 50%;
+    width: 20%;
 }
 
 .p6{
-    width: 70%;
+    width: 40%;
 }
 
-.p7{
-    width: 75%;
-}
-
-.p8{
-    width: 55%;
-}
 
 .progress-bar span{
     float: right;
@@ -430,6 +423,7 @@ nav ul li a{
 .services-desc{
     font-size: 14px;
     color: black;
+    text-align: justify;
 }
 
 @media (max-width: 960px){
@@ -508,9 +502,9 @@ nav ul li a{
 
 .portfolio-items{
     width: 100%;
-    display: block;
+    display: flex;
     margin-top: 15%;
-    left: 10%;
+    left: 5%;
 }
 
 .portfolio-items .item{
@@ -543,6 +537,7 @@ nav ul li a{
     line-height: 20px;
     margin-left: 39%;
 }
+
 
 /**********FOOTER*************/
 
@@ -845,10 +840,10 @@ input[type=submit]:hover{
     }
 }
 
-@media(min-width: 1020px){
+@media(max-width: 1020px){
 
     .portfolio-items{
-        margin-left: 10%;
+        left: 10%;
     }
 
     .page-preloader:before{
@@ -941,17 +936,13 @@ input[type=submit]:hover{
         margin-left: 2%;
     }
 
-    .portfolio-items{
-        margin-left: 13%;
-    }
-
     .contact {
         width: 100%;
     }
 }
 
 
-@media (min-width: 768px){
+@media (max-width: 768px){
     html{
         width: 100%;
     }
@@ -972,9 +963,9 @@ input[type=submit]:hover{
         margin-left: 10%;
     }
 
-    .portfolio-items{
+    /* .portfolio-items{
         margin-left: 1%;
-    }
+    } */
 
     .about-me{
         margin-left: 10%;
@@ -1053,7 +1044,7 @@ input[type=submit]:hover{
     }
 }
 
-@media (min-width: 450px){
+/* @media (min-width: 450px){
     html{
         width: 100%;
     }
@@ -1087,7 +1078,7 @@ input[type=submit]:hover{
     .counting::after{
         font-size: 0.5em;
     }
-}
+} */
 
 @media (max-width: 400px){
 
@@ -1125,7 +1116,7 @@ input[type=submit]:hover{
     }
 
     .portfolio-items{
-        margin-left: -15%;
+        margin-left: -4%;
         margin-top: 30%;
     }
 
@@ -1155,8 +1146,15 @@ input[type=submit]:hover{
     }
 }
 
-@media(min-width: 375px){
+@media (max-width: 320px){
+    .portfolio-items{
+        margin-left: -12%;
+        margin-top: 30%;
+    }
+}
+
+/* @media(min-width: 375px){
     .portfolio-items{
         margin-left: -4%;
     }
-}
+} */

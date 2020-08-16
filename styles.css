@@ -569,6 +569,10 @@ nav ul li a{
     text-align: center;
 }
 
+.testimonials p{
+    text-align: left;
+}
+
 .testimonials-width{
     max-width: 1000px;
     padding: 0 20px;

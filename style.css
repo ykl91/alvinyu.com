@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/***Page Transition***/
+
+body.index{
+    background-color: none;
+}
+
+body.about{
+    background-color: none;
+}
+
+/******/
+
+/*****Dark&Light Toggle******/
+body{
+    transition: all 0.3s ease-out;
+}
+
+.dark {
+    background-color: #222222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+
+.switch{
+    margin-left: 25px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.inner-switch {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 20px;
+    width: 50px;
+    text-align: center;
+    font-size: 15px;
+    padding: 3px;
+    margin-left: 5px;
+}
+/***********/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1500px;
+    padding: 0px 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+/* 
+.navbar.sticky{
+    background-color: white;
+} */
+
+
+.navbar .logo a{
+    font-size: 20px;
+    font-weight: 800;
+    color: #5B7B7A;
+    isolation: isolate;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    color: #5B7B7A;
+    font-size: 18px;
+    font-weight: 900;
+    margin-left: 25px;
+    isolation: isolate;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+}
+
+.menu li a:hover, .active{
+    color: brown !important;
+    font-weight: bolder;
+    transition: all ease 0.4s;
+}
+
+.menu-btn{
+    color: brown;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    display: flex;
+    height: 80vh;
+    min-height: 500px;
+    font-family: 'Alegreya', sans-serif;
+}
+
+.home .max-width{
+    margin-top: 15%;
+}
+
+.home .home-content .text{
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.home .home-content{
+    text-align: center;
+}
+
+.home .home-content p{
+   display: inline-block;
+   margin-top: 100px;
+   font-size: 19px;
+   isolation: isolate;
+   color: brown;
+}
+
+.about{
+    /* display: flex; */
+    height: 80vh;
+    min-height: 500px;
+    font-family: 'Alegreya', sans-serif;
+}
+
+.about .about-content{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+.about .about-content .about-text{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about .about-content .about-text a{
+    color: #898989;
+}
+
+.about .about-content .about-text i{
+    color: grey;
+}
+
+.about .about-content .about-text .social{
+    text-decoration: underline;
+}
+
+
+.portfolio{
+    margin: 30px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image{
+    background: #7E7F83;
+    position: relative;
+    flex: 1;
+    max-width: 460px;
+    height: 327px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.image img{
+    opacity: 0.8;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition-property: opacity;
+}
+
+.image:hover img{
+    opacity: 1;
+}
+
+.image .details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: brown;
+    width: 100%;
+    height: 100%;
+}
+
+.image .details h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 150px;
+    transition: 0.4s;
+    transition-property: transform;
+}
+
+.image:hover .details h2{
+    transform: translateY(-30px);
+}
+
+.image .details p{
+    margin: 30px 30px 0 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+} 
+
+.image:hover .details p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.more{
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-left: 0;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+}
+
+.image:hover .more{
+    bottom: 0;
+}
+
+.more .click-here{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.more .click-here span{
+    font-weight: 900;
+}
+
+@media (max-width: 1080px){
+    .image{
+        flex: 100%;
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 400px){
+    .image .details p{
+        font-size: 16px;
+    }
+
+    .more .read-more, .more a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1104px){
+    .home .max-width{
+        margin-top: 45%;
+    }
+    .home .home-content .text{
+        font-size: 45px;
+    }
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px){
+    
+    .switch{
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+
+    .max-width{
+        padding: 20px 50px;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: white;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding-top: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        right: 0;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+        color: brown;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    .home .home-content .text{
+        font-size: 30px;
+    }
+    .home .max-width{
+        margin-top: 35%;
+    }
+    .home .home-content p{
+        font-size: 20px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .about-text{
+        margin-top: 0;   
+    }
+    
+}
+/* 
+@media (max-width: 690px){
+    .home .max-width{
+        margin-top: 30%;
+    }
+    .home .home-content .text{
+        font-size: 25px;
+    }
+    .home .home-content a{
+        font-size: 14px;
+    }
+} */
+
+@media (max-width: 500px){
+    .home{
+        height: 0px;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: white;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding-top: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        right: 0;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+        color: brown;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    /* .home .max-width{
+        margin-top: 60%;
+    } */
+    .home .home-content .text{
+        font-size: 15px;
+    }
+    .home .home-content p{
+        font-size: 15px;
+    }
+
+    .more .read-more, .more a{
+        font-size: 18px;
+    }
+
+        
+    .about .about-content{
+        margin-left: 0%;
+        /* margin-top: 15%; */
+    }
+
+    .about .about-content h1{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .about .about-content .about-text{
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 0px;
+    }
+
+    .switch{
+        margin: 20px;
+        color: black;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+    }
+}

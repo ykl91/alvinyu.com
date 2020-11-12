@@ -1,53 +1,72 @@
-// $('.hamburger').on("click",function(){
-//     if( !$('body').hasClass('mobileopen') ) {
-//         $('body').addClass('mobileopen');
-//     } else {
-//         $('body').removeClass('mobileopen');
-//     }
-//     return false; 
-// });
+$(document).ready(function(){
 
-// $('.link_click').on('click', function(){
-//     $('body').removeClass('mobileopen');
-// });
+///////Dark&Light button///////
 
+// Check LocalStorage for Existing Key and set Mode
+if (localStorage.getItem("mode") == "dark") {
+    $( "body" ).addClass( "dark" );
+        $( ".inner-switch" ).text( "ON" );
+    } else if (localStorage.getItem("mode") == "light"){
+        $( "body" ).removeClass( "dark" );
+        $( ".inner-switch" ).text( "OFF" );
+    }
+    // Check LocalStorage for Existing Key then Detect Browswer "prefers-color-scheme" and set Mode
+    var mq = window.matchMedia( '(prefers-color-scheme: dark)' );
+    if (localStorage.getItem("mode") == "light"){
+        $( "body" ).removeClass( "dark" );
+        $( ".inner-switch" ).text( "OFF" );
+    } else if ( mq.matches ){
+        $( "body" ).addClass( "dark" );
+        $( ".inner-switch" ).text( "ON" );
+    }
 
-    $('.portfolio-items').isotope({
-        itemSelector: '.item',
-        layoutMode: 'fitRows'
+    // Toggle Mode and set LocalStorage Key
+    $( ".inner-switch" ).on("click", function() {
+        if( $( "body" ).hasClass( "dark" )) {
+          $( "body" ).removeClass( "dark" );
+          $( ".inner-switch" ).text( "OFF" );
+          localStorage.setItem("mode","light");
+        } else {
+          $( "body" ).addClass( "dark" );
+          $( ".inner-switch" ).text( "ON" );
+          localStorage.setItem("mode","dark");
+        }
     });
-    $('.portfolio-menu ul li').click(function(){
-        $('.portfolio-menu ul li').removeClass('active');
-        $(this).addClass('active');
 
-        var selector = $(this).attr('data-filter');
-        $('.portfolio-items').isotope({
-            filter: selector
-        });
-        return false;
-    });
+///////////////////////////////
 
-/****************/
-
-$(function(){
-    $('.navbar, nav').click(function(){
-      $('.navbar').toggleClass('navbar-on');
-      $('nav').fadeToggle();
-      $('nav').removeClass('nav-hide');
-    });
+//Page Transition
+$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
   });
 
-/****************/
 
-function counting(){
-    var count = setInterval(function(){
-        var c = parseInt($('.counting').text());
-        $('.counting').text((++c).toString());
-        if (c == 100){
-            clearInterval(count);
-            $('.counting').addClass('hide')
-            $('.page-preloader').addClass('active')
-        }
-    },60)
-}
-counting()
+///////////////////////////////
+
+//toggle menu
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+
+///////////////////////////////

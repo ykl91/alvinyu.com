@@ -398,6 +398,10 @@ body{
         height: 0px;
     }
 
+    .home .max-width{
+        margin-top: 30%;
+    }
+
     .navbar .menu{
         position: fixed;
         height: 100vh;

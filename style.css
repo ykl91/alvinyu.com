@@ -193,7 +193,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
 }
-/* 
+
 .image{
     background: #7E7F83;
     position: relative;
@@ -286,7 +286,7 @@ body{
 
 .more .click-here span{
     font-weight: 900;
-} */
+}
 
 @media (max-width: 1080px){
     .image{

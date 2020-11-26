@@ -534,6 +534,7 @@ section .card .box .contentbox .link p{
         font-size: 15px;
         line-height: 20px;
         margin-top: 0px;
+        width: 90%;
     }
 
     .switch{

@@ -543,4 +543,7 @@ section .card .box .contentbox .link p{
         font-weight: 600;
         font-family: 'Nunito', sans-serif;
     }
+    .row{
+        display: flex;
+    }
 }

@@ -182,7 +182,7 @@ body{
     text-decoration: underline;
 }
 
-/* 
+
 .portfolio{
     margin: 30px;
 }
@@ -286,9 +286,9 @@ body{
 
 .more .click-here span{
     font-weight: 900;
-} */
+}
 
-.portfolio{
+/* .portfolio{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,7 +366,7 @@ section .card .box .contentbox .link h2{
 section .card .box .contentbox .link p{
     color: white;
     font-size: 10px;
-}
+} */
 @media (max-width: 1080px){
     /* .image{
         flex: 100%;
@@ -542,8 +542,5 @@ section .card .box .contentbox .link p{
         color: black;
         font-weight: 600;
         font-family: 'Nunito', sans-serif;
-    }
-    section .card .box .contentbox{
-        background: #333;
     }
 }

@@ -368,10 +368,10 @@ section .card .box .contentbox .link p{
     font-size: 10px;
 } */
 @media (max-width: 1080px){
-    /* .image{
+    .image{
         flex: 100%;
         max-width: 480px;
-    } */
+    }
 }
 
 @media (max-width: 1104px){
@@ -456,9 +456,9 @@ section .card .box .contentbox .link p{
 }
 
 @media (max-width: 500px){
-    /* .image .details p{
+    .image .details p{
         font-size: 20px;
-    } */
+    }
 
     .more .read-more, .more a{
         font-size: 18px;

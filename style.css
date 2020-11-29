@@ -18,7 +18,7 @@ body.about{
 /******/
 
 /*****Dark&Light Toggle******/
-/* body{
+body{
     transition: all 0.3s ease-out;
 }
 
@@ -46,12 +46,9 @@ body.about{
     font-size: 15px;
     padding: 3px;
     margin-left: 5px;
-} */
-body{
-    transition: all 0.3s ease-out;
 }
 
-body.dark-theme{
+/* body.dark-theme{
     background-color: #1D2521;
     color: #C7D1CC;
 }
@@ -63,7 +60,7 @@ body.dark-theme{
     color: #707070;
     font-size: 1.5rem;
     position: absolute;
-}
+} */
 /***********/
 
 *{
@@ -406,15 +403,15 @@ section .card .box .contentbox .link p{
 }
 
 @media (max-width: 991px){
-    /* .switch{
+    .switch{
         margin-left: 0%;
         margin-top: 5%;
-    } */
+    }
 
-    #theme-button{
+    /* #theme-button{
         margin: 10px;
         position: initial;
-    }
+    } */
 
     .max-width{
         padding: 20px 50px;
@@ -560,14 +557,14 @@ section .card .box .contentbox .link p{
         width: 90%;
     }
 
-    /* .switch{
+    .switch{
         margin: 20px;
         color: black;
         font-weight: 600;
         font-family: 'Nunito', sans-serif;
-    } */
-    #theme-button{
+    }
+    /* #theme-button{
         margin: 10px;
         position: initial;
-    }
+    } */
 }

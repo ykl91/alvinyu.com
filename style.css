@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+
 /***Page Transition***/
 
 body.index{
@@ -17,7 +18,7 @@ body.about{
 /******/
 
 /*****Dark&Light Toggle******/
-body{
+/* body{
     transition: all 0.3s ease-out;
 }
 
@@ -45,6 +46,23 @@ body{
     font-size: 15px;
     padding: 3px;
     margin-left: 5px;
+} */
+body{
+    transition: all 0.3s ease-out;
+}
+
+body.dark-theme{
+    background-color: #1D2521;
+    color: #C7D1CC;
+}
+
+#theme-button{
+    margin-left: 25px;
+    top: 30px;
+    cursor: pointer;
+    color: #707070;
+    font-size: 1.5rem;
+    position: absolute;
 }
 /***********/
 
@@ -388,9 +406,14 @@ section .card .box .contentbox .link p{
 }
 
 @media (max-width: 991px){
-    .switch{
+    /* .switch{
         margin-left: 0%;
         margin-top: 5%;
+    } */
+
+    #theme-button{
+        margin: 10px;
+        position: initial;
     }
 
     .max-width{
@@ -537,10 +560,14 @@ section .card .box .contentbox .link p{
         width: 90%;
     }
 
-    .switch{
+    /* .switch{
         margin: 20px;
         color: black;
         font-weight: 600;
         font-family: 'Nunito', sans-serif;
+    } */
+    #theme-button{
+        margin: 10px;
+        position: initial;
     }
 }
